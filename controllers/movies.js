@@ -60,7 +60,6 @@ function getMovies(req, res, next) {
 
   Movie
     .find({ owner: _id })
-    .populate('owner', '_id')
     .then((movies) => {
       if (movies) return res.send(movies);
 
