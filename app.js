@@ -10,9 +10,7 @@ const { requestLogger, errorLogger } = require('./middlewares/logger');
 const limiter = require('./middlewares/rateLimiter');
 const router = require('./routes/index');
 const errorHandler = require('./middlewares/errorHandler');
-const { MONGODB_URL } = require('./utils/config');
-
-const { PORT } = process.env;
+const { MONGODB_URL, PORT } = require('./utils/config');
 
 const app = express();
 
